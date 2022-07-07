@@ -1,9 +1,9 @@
-import {Pair} from './Pair'
+import Pair from '../src/Pair'
 interface IQuery {
     get(key: string) : Promise<string>
     set(key: string, value: string): Promise<Pair>
 }
-export class Query implements IQuery {
+export default class Query implements IQuery {
     computer: any
     constructor (computer: any) {
         this.computer = computer
